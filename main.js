@@ -24,7 +24,7 @@ students.forEach((student) => {
   let studentDiv = document.createElement("div");
   studentDiv.className = "student";
 
-  studentDiv.innerHTML = student.url;
+  studentDiv.innerHTML = `<img src=${student.url} />`;
 
   divContainer.appendChild(studentDiv);
 });
