@@ -18,13 +18,18 @@ let students = [
 
 let divContainer = document.createElement("div");
 divContainer.className = "container";
+divContainer.style.backgroundColor = "grey";
 document.body.appendChild(divContainer);
 
 students.forEach((student) => {
   let studentDiv = document.createElement("div");
   studentDiv.className = "student";
+  studentDiv.className = "student";
 
-  studentDiv.innerHTML = `<img src=${student.url} />`;
+  studentDiv.style.display = "flex";
+  studentDiv.style.justifyContent = "center";
+
+  studentDiv.innerHTML = `<img src="${student.url}" style="width: 30%; height: 30%; object-fit: cover;" />`;
 
   divContainer.appendChild(studentDiv);
 });
